@@ -1,1 +1,22 @@
-<p>product-list works!</p>
+<body class="body">
+  <app-header></app-header>
+  <main class="cards-container"  id="cards-container">
+        <div class="card" *ngFor="let product of filteredProducts">
+          <img [src]="product.imageUrl" [alt]="product.name" />
+    
+          <p class="product-name">
+            <strong>{{ product.name }}</strong>
+          </p>
+    
+          <p class="text">{{ product.description }}</p>
+    
+          <p>
+            <b>${{ product.price.toFixed(2) }}</b>
+          </p>
+    
+          <button type="button" [id]="product.id" class="button">
+            Add to Cart
+          </button>
+      </div>
+  </main>
+  <app-footer></app-footer>

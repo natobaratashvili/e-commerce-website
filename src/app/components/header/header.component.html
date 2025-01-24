@@ -3,14 +3,15 @@
         <a href="#"><img src="/imgs/logo.png" id="logo"></a>
         
          <div class="filter-container">
-             <input type="text" id="product-filter-input" placeholder="Filter products by name">
+             <input type="text" id="product-filter-input"  placeholder="Filter products by name" [(ngModel)]="filterText"  (input)="onFilterChange ()" />
          </div>
          <nav class="navigation"> 
-             <a href="cart.html">Cart</a>
+            <a routerLink="/">Home</a>
+             <a routerLink="/cart">Cart</a>
              <a href="#">Career</a>
              <a href="#">Trade In</a>
              <a href="#">Branches</a>
-             <a href="about.html">About</a>
+             <a routerLink="/about">About</a>
          </nav>
      </header>
 </div>
