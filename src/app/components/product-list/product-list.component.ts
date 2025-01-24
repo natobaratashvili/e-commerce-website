@@ -33,7 +33,6 @@ export class ProductListComponent {
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
-    alert(`${product.name} added to cart!`); 
   }
 
 }

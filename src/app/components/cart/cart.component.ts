@@ -16,24 +16,19 @@ export class CartComponent {
   }
 
   ngOnInit() {
-    console.log('ngOnInit');
     this.cartItems = this.cartService.getItems();
   }
 
   removeItem(productId: number) {
-    console.log('remove');
-
     this.cartService.removeItem(productId);
     this.cartItems = this.cartService.getItems();
   }
 
   getTotalAmount() {
-    console.log('getTotalAmount');
     return this.cartItems.reduce((acc, item) => acc + item.count, 0);
   }
 
   getTotalPrice() {
-    console.log('getTotalPrice');
     return this.cartItems.reduce((acc, item) => acc + item.price * item.count, 0);
   }
 
