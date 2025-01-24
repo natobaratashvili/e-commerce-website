@@ -15,8 +15,7 @@ const appRoutes : Routes = [
   { path: '', component : ProductListComponent},
   { path: 'cart', component: CartComponent },
   {path: 'about', component: AboutComponent},
- // { path: 'products/:id', component: ProductComponent},
-  //{ path: 'dashboard', component: DashboardComponent, canActivate: [authGuard]},
+  { path: 'product/:id', component: ProductDetailsComponent } ,
   { path: '**', component: NotFoundComponent}
  ]
 @NgModule({

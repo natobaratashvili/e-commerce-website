@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../products.service';
 import { FilterService } from '../../filter.service';
+import { CartService } from '../../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +15,7 @@ export class ProductListComponent {
   filteredProducts: any[] = []; 
   filterText: string = ''; 
 
-  constructor(private productsService:ProductsService, private filterService: FilterService) { }
+  constructor(private productsService:ProductsService, private filterService: FilterService, private cartService : CartService) { }
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
@@ -28,6 +29,11 @@ export class ProductListComponent {
 
   filterProducts() {
     this.filteredProducts = this.productsService.filterProductsByName(this.filterText);
+  }
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    alert(`${product.name} added to cart!`); 
   }
 
 }

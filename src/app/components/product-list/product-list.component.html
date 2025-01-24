@@ -5,7 +5,7 @@
           <img [src]="product.imageUrl" [alt]="product.name" />
     
           <p class="product-name">
-            <strong>{{ product.name }}</strong>
+            <strong [routerLink]="['/product', product.id]">{{ product.name }}</strong>
           </p>
     
           <p class="text">{{ product.description }}</p>
@@ -14,7 +14,7 @@
             <b>${{ product.price.toFixed(2) }}</b>
           </p>
     
-          <button type="button" [id]="product.id" class="button">
+          <button type="button" [id]="product.id" class="button" (click)="addToCart(product)">
             Add to Cart
           </button>
       </div>

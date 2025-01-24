@@ -1,0 +1,101 @@
+.cart-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid  rgb(196, 230, 242)
+  }
+  
+  .cart-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+
+  .cart-container p {
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cart-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+
+  .remove-button {
+    background-color: rgb(238, 107, 107); 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: burlywood; 
+    transform: scale(1.05);
+  }
+  
+  .remove-button:active {
+    background-color: burlywood; 
+    transform: scale(0.98);
+  }
+
+  .buy-button {
+    background-color: burlywood; 
+    color: rgb(22, 21, 21); 
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+  a[routerLink] {
+    display: inline-block;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  a[routerLink]:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    transform: translateX(-3px);
+  }
+  
+  a[routerLink]:active {
+    color: #004085;
+  }
+  

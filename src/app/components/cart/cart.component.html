@@ -1,1 +1,27 @@
-<p>cart works!</p>
+<app-header></app-header>
+<div class="cart-container">
+    <h2>Your Cart</h2>
+  
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+  
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.imageUrl" [alt]="item.name" class="cart-image" />
+      <p><strong>{{ item.name }}</strong></p>
+      <p>Quantity: {{ item.count }}</p>
+      <p><b>${{ (item.price * item.count).toFixed(2) }}</b></p>
+  
+      <button (click)="removeItem(item.id)" class="remove-button">Remove</button>
+    </div>
+
+
+  <div class="cart-summary">
+    <p><b>Total Items:</b> {{ getTotalAmount()}}</p>
+    <p><b>Total Price:</b> ${{ getTotalPrice() }}</p>
+  </div>
+
+  <button class="buy-button">Buy Now</button>
+  </div>
+    <app-footer></app-footer>
+  

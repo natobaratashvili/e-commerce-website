@@ -1,1 +1,10 @@
-<p>product-details works!</p>
+<app-header></app-header>
+<div *ngIf="product" class="product-details">
+    <h1>{{ product.name }}</h1>
+    <img [src]="product.imageUrl" [alt]="product.name" />
+    <p>{{ product.description }}</p>
+    <p><b>Price: ${{ product.price.toFixed(2) }}</b></p>
+    <button class="button">Buy</button>
+    <a routerLink="/">← Back to Products</a>  
+  </div>
+  <app-footer></app-footer>

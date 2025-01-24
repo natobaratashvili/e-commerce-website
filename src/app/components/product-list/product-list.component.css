@@ -39,16 +39,21 @@
 
 
 .button {
+    background-color: burlywood;  
+    color: rgb(22, 21, 21); /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    background-color: burlywood;
-    text-align: center ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font: 1em sans-serif;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
 }
 .card button:hover {
-    background-color: #e9b6b6;
+    background-color: burlywood;
+    transform: scale(1.05);
 }
 
 img {
@@ -57,3 +62,20 @@ img {
     border-radius: 2%;
     box-sizing: border-box;
 }
+
+.product-name strong {
+    font-style: bold;
+    cursor: pointer;          
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    white-space: nowrap; 
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-name strong:hover {
+    color: #5f6368; 
+    transform: scale(1.05);
+  }  

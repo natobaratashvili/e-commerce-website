@@ -1,0 +1,45 @@
+/* ✅ Button Styling */
+.button {
+    background-color: burlywood;  
+    color: rgb(22, 21, 21); /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:hover {
+    background-color: burlywood; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect */
+  }
+  
+  .button:active {
+    background-color: burlywood; /* Even darker green when clicked */
+    transform: scale(0.98);
+  }
+  
+  /* ✅ Back Link Styling */
+  a[routerLink] {
+    display: inline-block;
+    color: #007bff; /* Blue link color */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  a[routerLink]:hover {
+    color: #0056b3; /* Darker blue */
+    text-decoration: underline;
+    transform: translateX(-3px); /* Move left slightly */
+  }
+  
+  a[routerLink]:active {
+    color: #004085; /* Even darker blue */
+  }
+  
