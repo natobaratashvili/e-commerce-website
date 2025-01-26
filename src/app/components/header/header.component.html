@@ -2,16 +2,16 @@
     <header class="header">
         <a href="#"><img src="/imgs/logo.png" id="logo"></a>
         
-         <div class="filter-container">
+         <div class="filter-container" *ngIf="showSearchBar">
              <input type="text" id="product-filter-input"  placeholder="Filter products by name" [(ngModel)]="filterText"  (input)="onFilterChange ()" />
          </div>
          <nav class="navigation"> 
-            <a routerLink="/">Home</a>
-             <a routerLink="/cart">Cart</a>
+            <a routerLink="/"  routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+             <a routerLink="/cart"  routerLinkActive="active-link">Cart</a>
              <a routerLink="/career">Career</a>
              <a routerLink="/trade">Trade In</a>
              <a routerLink="/branches">Branches</a>
-             <a routerLink="/about">About</a>
+             <a routerLink="/about" routerLinkActive="active-link">About</a>
          </nav>
      </header>
 </div>

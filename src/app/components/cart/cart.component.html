@@ -18,7 +18,7 @@
 
   <div class="cart-summary">
     <p><b>Total Items:</b> {{ getTotalAmount()}}</p>
-    <p><b>Total Price:</b> ${{ getTotalPrice() }}</p>
+    <p><b>Total Price:</b> ${{ getTotalPrice().toFixed(2) }}</p>
   </div>
 
   <button class="buy-button">Buy Now</button>

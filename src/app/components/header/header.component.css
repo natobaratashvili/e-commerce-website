@@ -59,9 +59,17 @@
 }
 
 
-/* Hover effect */
+
 .navigation a:hover {
-    color: #3498db; /* Light blue for hover effect */
-    transform: scale(1.05); /* Slightly scale up on hover for interactivity */
+    color: #3498db; 
+    transform: scale(1.05); 
 }
+
+
+  .navigation a.active-link {
+    color: #3498db;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+  
 
