@@ -1,6 +1,5 @@
-
+/* 
 .body {
-    /* background-color: black; */
     width: 100%;
     margin: 0;
     display: flex;
@@ -12,7 +11,6 @@
 }
 
 .cards-container {
-    /* background-color: rgb(118, 96, 209); */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,9 +19,8 @@
     box-sizing: border-box;
     padding-left: 1%;
     padding-right: 1% ;
-    margin-top: 1%;
+    margin-top: 10%;
     justify-items: center;
-    
 }
 
 .card {
@@ -40,7 +37,7 @@
 
 .button {
     background-color: burlywood;  
-    color: rgb(22, 21, 21); /* Text color */
+    color: rgb(22, 21, 21); /* Text color 
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -79,3 +76,123 @@ img {
     color: #5f6368; 
     transform: scale(1.05);
   }  
+
+   */
+
+   .body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Changed: Ensures full-page height for proper layout */
+    box-sizing: border-box;
+    align-items: center; /* Added: Centers content horizontally */
+}
+
+.cards-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3-column layout */
+    grid-template-rows: auto;
+    gap: 2% 5%;
+    padding: 1%;
+    margin-top: 10%; /* Adjusted: Reduced top margin */
+    justify-items: center;
+}
+
+/* Card styles */
+.card {
+    background-color: rgb(196, 230, 242);
+    border-radius: 5px;
+    padding: 5%;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+/* Button */
+.button {
+    background-color: burlywood;
+    color: rgb(22, 21, 21);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card button:hover {
+    background-color: darkgoldenrod; /* Changed: Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+/* Image */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+/* Product Name */
+.product-name strong {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product-name strong:hover {
+    color: #5f6368;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: #d5dbe1;
+    padding: 10px;
+    margin-top: 10px; /* Changed: Pushes footer to bottom */
+    position: relative;
+}
+
+/* === Responsive Design === */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Changed: 2-column layout */
+        gap: 4%; /* Adjusted: More spacing for clarity */
+    }
+
+    .card {
+        max-width: 90%; /* Adjusted: Makes cards fit smaller screens */
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Changed: 1-column layout */
+        gap: 5%;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .product-name strong {
+        font-size: 1em; /* Adjusted: Smaller text for mobile */
+    }
+
+    .button {
+        font-size: 14px; /* Adjusted: Smaller button text */
+        padding: 8px 16px; /* Adjusted: Less padding on smaller screens */
+    }
+}
